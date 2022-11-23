@@ -1,3 +1,4 @@
+
 <?php
 /**
  *
@@ -18,19 +19,19 @@ if( $post_slug ){
     $action_page =  home_url( '/' );
 }
 ?>
-
+<div class="search_bottum">
 <div class="job_listings">
-
   <form class="jobscout_job_filters" method="GET" action="<?php echo esc_url( $action_page ) ?>">
     <div class="search_jobs">
 
-      <div class="search_keywords">
-        <label for="search_keywords"><?php esc_html_e( 'Keywords', 'jobscout' ); ?></label>
-        <input type="text" id="search_keywords" name="search_keywords" placeholder="<?php esc_attr_e( 'Keywords', 'jobscout' ); ?>">
+      <div class="search1">
+        <label for="search_keywords"><?php esc_html_e('Keywords', 'jobscout' ); ?></label>
+        <input type="text" id="search_keywords" name="search_keywords" 
+        placeholder=" <?php esc_attr_e( 'Keywords', 'jobscout' ); ?>">
       </div>
 
-      <div class="search_location">
-        <label for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
+      <div class="search2">
+        <label style="padding-left: 30px" for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
         <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">
       </div>
       
@@ -46,11 +47,12 @@ if( $post_slug ){
           </div>
       <?php } ?>
       
-      <div class="search_submit">
-        <input type="submit" value="<?php esc_attr_e( 'Search', 'jobscout'); ?>" />
+      <div class="search3">
+        <input type="submit" value="<?php esc_attr_e( 'SEARCH JOB', ''); ?>" title="hello" />
       </div>
 
     </div>
   </form>
 
+</div>
 </div>
