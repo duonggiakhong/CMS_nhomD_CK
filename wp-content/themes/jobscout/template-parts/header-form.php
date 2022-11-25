@@ -27,7 +27,7 @@ if( $post_slug ){
       <div class="search1">
         <label for="search_keywords"><?php esc_html_e('Keywords', 'jobscout' ); ?></label>
         <input type="text" id="search_keywords" name="search_keywords" 
-        placeholder=" <?php esc_attr_e( 'Keywords', 'jobscout' ); ?>">
+        placeholder=" <?php esc_attr_e( 'Search for jobs, companies, skills', 'jobscout' ); ?>"></input>
       </div>
 
       <div class="search2">
