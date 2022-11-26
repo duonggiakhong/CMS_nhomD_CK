@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <?php
 /**
  *
@@ -23,16 +23,17 @@ if( $post_slug ){
 <div class="job_listings">
   <form class="jobscout_job_filters" method="GET" action="<?php echo esc_url( $action_page ) ?>">
     <div class="search_jobs">
-
       <div class="search1">
         <label for="search_keywords"><?php esc_html_e('Keywords', 'jobscout' ); ?></label>
         <input type="text" id="search_keywords" name="search_keywords" 
-        placeholder=" <?php esc_attr_e( 'Search for jobs, companies, skills', 'jobscout' ); ?>"></input>
+        placeholder="<?php esc_attr_e( 'Search for jobs, companies, skills', 'jobscout' ); ?>"></input>
+        <i class="fa fa-search" aria-hidden="true"></i>
       </div>
 
       <div class="search2">
         <label style="padding-left: 30px" for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
         <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
       </div>
       
       <?php if( $ed_job_category ){ ?>
