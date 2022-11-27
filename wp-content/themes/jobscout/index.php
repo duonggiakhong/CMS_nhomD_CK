@@ -1,3 +1,6 @@
+<head>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/module-3.css" type="text/css" media="screen" />
+</head>
 <?php
 /**
  * The main template file
