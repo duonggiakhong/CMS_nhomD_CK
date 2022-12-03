@@ -1,0 +1,8 @@
+.list-view .site-main article .post-thumbnail img {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+body {
+    background-color: red !important;
+}
