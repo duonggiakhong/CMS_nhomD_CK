@@ -29,9 +29,13 @@ if( $post_slug ){
         placeholder="<?php esc_attr_e( 'Search for jobs, companies, skills', 'jobscout' ); ?>"></input>
         <i class="fa fa-search" aria-hidden="true"></i>
       </div>
-
       <div class="search2">
         <label style="padding-left: 30px" for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
+        <select name="languages" id="lang">
+        <option value="Location">Location</option>
+        <option value="US">US</option>
+        <option value="New York">New York</option>
+      </select>
         <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
       </div>
