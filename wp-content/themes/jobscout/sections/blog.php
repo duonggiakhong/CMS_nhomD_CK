@@ -1,3 +1,6 @@
+<head>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/module-3.css" type="text/css" media="screen" />
+</head>
 <?php
 
 /**
@@ -6,7 +9,7 @@
  * @package JobScout
  */
 
-$blog_heading = get_theme_mod('blog_section_title', __('Latest Articles', 'jobscout'));
+$blog_heading = get_theme_mod('blog_section_title', __('NEWEST BLOG ENTRIES', 'jobscout'));
 $sub_title    = get_theme_mod('blog_section_subtitle', __('We will help you find it. We are your first step to becoming everything you want to be.', 'jobscout'));
 $blog         = get_option('page_for_posts');
 $label        = get_theme_mod('blog_view_all', __('See More Posts', 'jobscout'));
@@ -21,6 +24,7 @@ $args = array(
     'ignore_sticky_posts' => true
 );
 
+
 $qry = new WP_Query($args);
 
 if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
@@ -28,7 +32,6 @@ if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
         <div class="container">
             <?php
             if ($blog_heading) echo '<h2 class="section-title">' . esc_html($blog_heading) . '</h2>';
-            if ($sub_title) echo '<div class="section-desc">' . wpautop(wp_kses_post($sub_title)) . '</div>';
             ?>
 
             <?php if ($qry->have_posts()) { ?>
@@ -36,8 +39,8 @@ if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
                     <?php
                     while ($qry->have_posts()) {
                         $qry->the_post(); ?>
-                        <article class="post">
-                            <figure class="post-thumbnail">
+                        <article class="post post-col">
+                            <figure class="post-thumbnail post-img">
                                 <a href="<?php the_permalink(); ?>" class="post-thumbnail">
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -48,19 +51,19 @@ if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
                                     ?>
                                 </a>
                             </figure>
-                            <header class="entry-header">
-                                <div class="entry-meta">
-                                    <?php
-                                    if (!$hide_author) jobscout_posted_by();
-                                    if (!$hide_date) jobscout_posted_on();
-                                    ?>
-                                </div>
+                            <header class="entry-header post-content">
                                 <h3 class="entry-title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h3>
+                                <p>
+                                    <?php the_excerpt(); ?>                                
+                                </p>
+                                <a class="more-post" href="<?php the_permalink(); ?>">Read More</a>
                             </header>
-                        </article>
-                    <?php
+                               
+                         </article>
+                        
+                        <?php
                     }
                     wp_reset_postdata();
                     ?>
