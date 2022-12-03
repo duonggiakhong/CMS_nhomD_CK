@@ -35,7 +35,7 @@ if( $post_slug ){
         <option value="Location">Location</option>
         <option value="US">US</option>
         <option value="New York">New York</option>
-      </select>
+        </select>
         <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
       </div>
